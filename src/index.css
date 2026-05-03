@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-purple: #9D94FF;
+  --color-primary-teal: #2DD4BF;
+  --color-background: #0A0A0B;
+  --color-card: rgba(255, 255, 255, 0.05);
+  --color-text-primary: #F3F4F6;
+  --color-text-secondary: #9CA3AF;
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer utilities {
+  .glass-card {
+    background-color: var(--color-card);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--color-glass-border);
+  }
+  
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(157, 148, 255, 0.2);
+  }
+  
+  .glow-teal {
+    box-shadow: 0 0 20px rgba(45, 212, 191, 0.2);
+  }
+
+  .text-glow-purple {
+    text-shadow: 0 0 10px rgba(157, 148, 255, 0.5);
+  }
+  
+  .text-glow-teal {
+    text-shadow: 0 0 10px rgba(45, 212, 191, 0.5);
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
